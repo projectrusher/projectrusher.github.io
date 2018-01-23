@@ -45,11 +45,9 @@ myDirectives.directive('spriteSheetRunner', ['loaderSvc','Sky', 'Ground', 'Hill'
                     hill2.addToStage(scope.stage);
                     ground.addToStage(scope.stage);
 
-                    scope.stage.addEventListener("stagemousedown", handleEvent);
                     createjs.Ticker.timingMode = createjs.Ticker.RAF;
                     createjs.Ticker.addEventListener("tick", tickStop);
                     scope.status = "paused";
-                    window.onkeydown = keydown;
                     scope.updateMap = addGrant;
                     scope.setFn({theDirFn: scope.updateMap});
                     
@@ -126,21 +124,6 @@ myDirectives.directive('spriteSheetRunner', ['loaderSvc','Sky', 'Ground', 'Hill'
                         scope.status = "paused";
                         grant.playAnimation("stop");
                         clearInterval(refresh); 
-                    }
-                }
-                function handleEvent() {
-                    if (scope.status === "paused") {
-                        run();
-                    } else if (scope.status === "running") {
-                        stopRun();
-                    }
-                }
-                function keydown(event) {
-                    if (event.keyCode === 39) {//if keyCode is "Right"
-                        run()
-                    }
-                    if (event.keyCode === 37) {//if keyCode is "Left"
-                        stopRun();
                     }
                 }
                 function tickRun(event) {
