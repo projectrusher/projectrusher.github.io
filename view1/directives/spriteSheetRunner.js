@@ -28,7 +28,7 @@ myDirectives.directive('spriteSheetRunner', ['loaderSvc','Sky', 'Ground', 'Hill'
                     } else {
                         scope.stage = new createjs.Stage(element[0]);
                     }
-                    w = scope.stage.canvas.width;
+                    w = '100%';
                     h = scope.stage.canvas.height;
                     loaderSvc.getLoader().addEventListener("complete", handleComplete);
                     loaderSvc.loadAssets();

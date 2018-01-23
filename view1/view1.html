@@ -1,6 +1,6 @@
 <div ng-app="myApp.view1">
-  <div ng-controller="View1Ctrl" style="background-color:black; width:100%; min-height:100vh; height:100%">
-    <sprite-sheet-runner set-fn="setDirectiveFn(theDirFn)" width="windowWidth - 17" height="gameHeight" score="score" lifes-count="lifesCount"></sprite-sheet-runner>
+  <div ng-controller="View1Ctrl" id="test" style="background-color:black; width:100vw; min-height:100vh; height:100%">
+    <sprite-sheet-runner set-fn="setDirectiveFn(theDirFn)" width="windowWidth" height="gameHeight" score="score" lifes-count="lifesCount"></sprite-sheet-runner>
     <span class="top-left"><h2>Score: {{score}}</h2></span>
     <div style="background-image: url('../assets/separator.png'); width:100%; height:25px"></div>
     <div id="formZone">
