@@ -7,11 +7,14 @@ angular.module('myApp.view1', ['ngRoute'])
   });
 }])
 .controller('View1Ctrl', ['$scope', '$window', function($scope, $window) {
-      $scope.windowWidth = test.clientWidth;
+      $scope.windowWidth = mainContainer.clientWidth;
       $scope.gameHeight = 300;
       $scope.score = 0;
       $scope.lifesCount = 3;
       $scope.setDirectiveFn = function(directiveFn) {
         $scope.directiveFn = directiveFn;
+      };
+      $scope.startfunction = function(metter){
+        $scope.$broadcast(`startfunction`, metter);
       };
 }]);

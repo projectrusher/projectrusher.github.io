@@ -1,4 +1,5 @@
-var refresh;
+let refresh;
+let curDist;
 myDirectives.directive('spriteSheetRunner', ['loaderSvc','Sky', 'Ground', 'Hill', 'Character', function (loaderSvc, Sky, Ground, Hill, Character) {
         "use strict";
         return {
@@ -51,6 +52,9 @@ myDirectives.directive('spriteSheetRunner', ['loaderSvc','Sky', 'Ground', 'Hill'
                     window.onkeydown = keydown;
                     scope.updateMap = addGrant;
                     scope.setFn({theDirFn: scope.updateMap});
+                    
+                    scope.$on('startfunction', run);
+
                     scope.$apply();
                 }
                 function addGrant(option) {
@@ -93,15 +97,26 @@ myDirectives.directive('spriteSheetRunner', ['loaderSvc','Sky', 'Ground', 'Hill'
                     grant.addToStage(scope.stage);
                     scope.$apply();
                 }
-                function run() {
+                function run(event, distance) {
                     if (scope.status === "paused") {
                         createjs.Ticker.addEventListener("tick", tickRun);
                         scope.status = "running";
                         grant.playAnimation("run");
+                        curDist = distance
                         refresh = setInterval(function(){ 
-                            scope.score = scope.score + 1;
-                            scope.$apply();    
+                            if (scope.score < curDist) {
+                                scope.score = scope.score + 1;
+                                scope.$apply();
+                            }
+                            if (scope.score === curDist) {
+                                stopRun();
+                            }
                         }, 1000);
+                    } else {
+                        clearInterval(refresh); 
+                        createjs.Ticker.removeEventListener("tick", tickRun);
+                        scope.status = "paused";
+                        run(event, distance);
                     }
                 }
                 function stopRun() {
