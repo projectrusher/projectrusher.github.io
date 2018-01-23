@@ -1,0 +1,18 @@
+<div ng-app="myApp.view1">
+  <div ng-controller="View1Ctrl" style="background-color:black; width:100%; min-height:100vh; height:100%">
+    <sprite-sheet-runner set-fn="setDirectiveFn(theDirFn)" width="windowWidth" height="gameHeight" score="score" lifes-count="lifesCount"></sprite-sheet-runner>
+    <span class="top-left"><h2>Score: {{score}}</h2></span>
+    <div style="background-image: url('../assets/separator.png'); width:100%; height:25px"></div>
+    <div id="formZone">
+      <center>
+        <h1 style="color:white;">Tell me who are you</h1>
+        <button class="button button2" ng-click="directiveFn(1)">I'm a boy</button>
+        <button class="button button3" ng-click="directiveFn(0)">I'm a girl</button><br/>
+        <input type="text" id="name" value="Type your name..." onblur="if(this.value==='')this.value='Type your name...'" onclick="if(this.value === 'Type your name...')this.value = ''"><br/>
+        <input type="text" id="org" name="fname" value="Who are you running for?" onblur="if(this.value==='')this.value='Who are you running for?'" onclick="if(this.value === 'Who are you running for?')this.value = ''"><br/>
+        <button class="buttonA" style="vertical-align:middle"><span>Send that shiet</span></button>
+        <input type="hidden" id="gender" value=""></input>
+      </center>
+    </div>
+  </div>
+</div>

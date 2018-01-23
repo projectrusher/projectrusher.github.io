@@ -1,0 +1,146 @@
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+.menu:before {
+  content: "[";
+}
+.menu:after {
+  content: "]";
+}
+.menu > li {
+  display: inline;
+}
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+.top-left {
+  position: absolute;
+  left: 30px;
+  top: 10px;
+}
+.top-right {
+  position: absolute;
+  right: 100px;
+  top: 10px;
+  float: right;
+}
+
+.buttonA {
+  display: inline-block;
+  background-color: #00C92B;
+  border: 2px solid #00C92B;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 20px;
+  width: 330px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 12px;
+  outline: none;
+}
+
+.buttonA span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.buttonA span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.buttonA:hover span {
+  padding-right: 25px;
+}
+
+.buttonA:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  outline: none;
+}
+
+.button2 {
+  background-color: #008CBA; 
+  color: white; 
+  border: 2px solid #008CBA;
+  border-radius: 12px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.button2:hover {
+    background-color: white;
+    color: black;
+}
+
+.button3 {
+    background-color: #FF00AA; 
+    color: white; 
+    border: 2px solid #FF00AA;
+    border-radius: 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.button3:hover {
+    background-color: white;
+    color: black;
+}
+
+input[type=text] {
+  width: 330px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color:black;
+  color:white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  outline: none;
+}
+
+input[type=text]:hover {
+  border: 2px solid red;
+}
+
+h1{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
