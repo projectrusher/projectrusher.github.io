@@ -37,10 +37,10 @@ myDirectives.directive('spriteSheetRunner', ['loaderSvc','Sky', 'Ground', 'Hill'
                     sky = new Sky({width:w, height:h});
                     sky.addToStage(scope.stage);
                     ground = new Ground({width:w, height:h});
-                    hill = new Hill({width:w, height:h, scaleFactor: 4, assetName: 'hill', groundHeight: ground.getHeight()});
+                    hill = new Hill({width:w, height:h, scaleFactor: 3, assetName: 'hill', groundHeight: ground.getHeight()});
                     hill.setAlpha(0.7);
                     hill.addToStage(scope.stage);
-                    hill2 = new Hill({width:w, height:h, scaleFactor: 3, assetName: 'hill2', groundHeight: ground.getHeight()});
+                    hill2 = new Hill({width:w, height:h, scaleFactor: 2, assetName: 'hill2', groundHeight: ground.getHeight()});
                     hill2.addToStage(scope.stage);
                     ground.addToStage(scope.stage);
 
@@ -63,9 +63,9 @@ myDirectives.directive('spriteSheetRunner', ['loaderSvc','Sky', 'Ground', 'Hill'
                             grant = new Character(
                                 {
                                     characterAssetName: 'grant2', 
-                                    y: 136,
-                                    width: 173,
-                                    height: 192,
+                                    y: 100,
+                                    width: 131,
+                                    height: 144,
                                     count: 25,
                                     startRun: 15,
                                     endRun: 24,
@@ -78,9 +78,9 @@ myDirectives.directive('spriteSheetRunner', ['loaderSvc','Sky', 'Ground', 'Hill'
                             grant = new Character(
                                 {
                                     characterAssetName: 'grant', 
-                                    y: 136,
-                                    width: 160,
-                                    height: 193,
+                                    y: 100,
+                                    width: 120,
+                                    height: 145,
                                     count: 25,
                                     startRun: 15,
                                     endRun: 24,

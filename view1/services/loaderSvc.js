@@ -5,8 +5,7 @@ myServices.service('loaderSvc', function () {
             {src: "sky2.png", id: "sky"},
             {src: "ground.png", id: "ground"},
             {src: "hill1.png", id: "hill"},
-            {src: "hill2.png", id: "hill2"},
-            {src: "logo.png", id: "logo"}
+            {src: "hill2.png", id: "hill2"}
         ], loader = new createjs.LoadQueue(true);
         createjs.Sound.registerPlugins([createjs.HTMLAudioPlugin]);  // need this so it doesn't default to Web Audio
         loader.installPlugin(createjs.Sound);
