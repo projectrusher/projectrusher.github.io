@@ -114,6 +114,7 @@ function newUser() {
       runner = JSON.parse(response);
       angular.element(document.getElementById('game')).scope().score = runner.meters;
       angular.element(document.getElementById('game')).scope().$apply();
+      angular.element(document.getElementById('game')).scope().addGrant(runner.gender);      
       document.getElementById('formZone').innerHTML = '';
       insertTab();
       loop = setInterval(activePoll, 5000);

@@ -17,4 +17,7 @@ angular.module('myApp.view1', ['ngRoute'])
       $scope.startfunction = function(metter){
         $scope.$broadcast(`startfunction`, metter);
       };
+      $scope.addGrant = function(gender){
+        $scope.$broadcast(`addGrant`, gender);
+      };
 }]);

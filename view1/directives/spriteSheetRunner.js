@@ -52,10 +52,11 @@ myDirectives.directive('spriteSheetRunner', ['loaderSvc','Sky', 'Ground', 'Hill'
                     scope.setFn({theDirFn: scope.updateMap});
                     
                     scope.$on('startfunction', run);
+                    scope.$on('addGrant', addGrant);
 
                     scope.$apply();
                 }
-                function addGrant(option) {
+                function addGrant(event, option) {
                     document.getElementById('gender').value = option;
                     if (grant) {
                         grant.removeFromStage(scope.stage);
