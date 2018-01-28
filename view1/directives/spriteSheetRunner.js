@@ -101,6 +101,7 @@ myDirectives.directive('spriteSheetRunner', ['loaderSvc','Sky', 'Ground', 'Hill'
                         createjs.Ticker.addEventListener("tick", tickRun);
                         scope.status = "running";
                         grant.playAnimation("run");
+                        runningSoundInstance = createjs.Sound.play("runningSound", {loop: -1});
                         curDist = distance
                         refresh = setInterval(function(){ 
                             if (scope.score < curDist) {
@@ -124,6 +125,7 @@ myDirectives.directive('spriteSheetRunner', ['loaderSvc','Sky', 'Ground', 'Hill'
                         createjs.Ticker.addEventListener("tick", tickStop);
                         scope.status = "paused";
                         grant.playAnimation("stop");
+                        createjs.Sound.stop();
                         clearInterval(refresh); 
                     }
                 }

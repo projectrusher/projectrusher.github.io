@@ -1,7 +1,7 @@
 let org;
 let runner;
 let loop;
-const baseUrl = 'http://localhost:8080';
+const baseUrl = 'https://projectrusher.herokuapp.com';
 
 const HttpClient = function() {
   this.get = function(aUrl, aCallback, errCallBack) {
@@ -71,19 +71,19 @@ function createRunner(run, xgender) {
   xhr.send(data);
 }
 
-function createOrg(org, runName, gender) {
+function createOrg(orga, runName, gender) {
   var xhr = new XMLHttpRequest();
   var url = `${baseUrl}/org`;
   xhr.open("POST", url, true);
   xhr.setRequestHeader("Content-type", "application/json");
   xhr.onreadystatechange = function () {
       if (xhr.readyState === 4 && xhr.status === 200) {
-        org = {name: org, members: []};
+        org = {name: orga, members: []};
         createRunner(runName, gender);
       }
   };
 
-  var data = JSON.stringify({name: org, members: []});
+  var data = JSON.stringify({name: orga, members: []});
   xhr.send(data);
 }
 
