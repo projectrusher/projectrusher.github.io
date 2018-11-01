@@ -7,8 +7,22 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="stylesheet" href="styles.3ff695c00d717f2d2a11.css"></head>
+
+  <!-- bootstrap (bootswatch template) and fontawesome stylesheets-->
+  <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" 
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" 
+        crossorigin="anonymous">
+<link rel="stylesheet" href="styles.12ff14e274b83406e576.css"></head>
 <body>
   <app-root></app-root>
-<script type="text/javascript" src="runtime.a66f828dca56eeb90e02.js"></script><script type="text/javascript" src="polyfills.7fb637d055581aa28d51.js"></script><script type="text/javascript" src="main.de4e5b274952864386e9.js"></script></body>
+  <!-- bootstrap scripts dependency-->
+  <!-- 
+    want to remove those dependencies but they are necessary for the
+    toggler button (mobile nav). keep them since I develop an equivalent
+    angular component
+  -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="runtime.a66f828dca56eeb90e02.js"></script><script type="text/javascript" src="polyfills.7fb637d055581aa28d51.js"></script><script type="text/javascript" src="main.d70b6a45cdfef0a16b6a.js"></script></body>
 </html>
